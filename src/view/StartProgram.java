@@ -15,6 +15,7 @@ public class StartProgram {
 		// TODO Auto-generated method stub
 		System.out.print("Enter the year the car was made: ");
 		int year = in.nextInt();
+		in.nextLine(); // this consumes the extra \n thrown by nextInt that was giving me a bug when having two nextLines after
 		System.out.print("Enter the car model: ");
 		String model = in.nextLine();
 		System.out.print("Enter the car make: ");
@@ -28,12 +29,13 @@ public class StartProgram {
 		// TODO Auto-generated method stub
 		System.out.print("Enter the year to delete: ");
 		int year = in.nextInt();
+		in.nextLine(); // this consumes the extra \n thrown by nextInt that was giving me a bug when having two nextLines after
 		System.out.print("Enter the model to delete: ");
 		String model = in.nextLine();
 		System.out.print("Enter the make to delete: ");
 		String make = in.nextLine();
 		Details toDelete = new Details(year, model, make);
-		//det.deleteItem(toDelete);
+		det.deleteItem(toDelete);
 
 	}
 	
@@ -70,7 +72,7 @@ public class StartProgram {
 			System.out.print("Which ID to edit: ");
 			int idToEdit = in.nextInt();
 
-			Details toEdit = det.searchForItemById(idToEdit);
+			Details toEdit = det.searchForCarById(idToEdit);
 			System.out.println("Retrieved " + toEdit.getYear() + " " + toEdit.getModel() + " " + toEdit.getMake());
 			System.out.println("1 : Update Year");
 			System.out.println("2 : Update Make");
@@ -105,6 +107,10 @@ public class StartProgram {
 		for(Details singleItem : allItems) {
 			System.out.println(singleItem.returnCarDetails());
 		}
+	}
+	
+	public static void main(String[] args) {
+		runMenu();
 	}
 	
 	public static void runMenu() {
