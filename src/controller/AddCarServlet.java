@@ -37,6 +37,7 @@ public class AddCarServlet extends HttpServlet {
 		Details de = new Details(intYear, model, make);
 		DetailsHelper dethel = new DetailsHelper();
 		dethel.insertCar(de);
+		getServletContext().getRequestDispatcher("/index.html").forward(request, response);;
 	}
 
 }
