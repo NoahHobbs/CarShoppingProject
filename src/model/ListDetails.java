@@ -23,7 +23,7 @@ public class ListDetails {
 	private int id;
 	@Column(name="LIST_NAME")
 	private String listName;
-	@ManyToOne
+	@ManyToOne (cascade=CascadeType.PERSIST)
 	@JoinColumn(name="OWNER_ID")
 	private Owner owner;
 	@OneToMany(cascade=CascadeType.PERSIST, fetch=FetchType.EAGER)
