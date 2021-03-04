@@ -27,10 +27,11 @@ public class ListDetails {
 	@JoinColumn(name="OWNER_ID")
 	private Owner owner;
 	@OneToMany(cascade=CascadeType.PERSIST, fetch=FetchType.EAGER)
-	@JoinTable( name ="CARS_ON_LIST", joinColumns= {@JoinColumn(name="LIST_ID", referencedColumnName="LIST_ID")}, 
+	@JoinTable( name ="cars_on_list", joinColumns= {@JoinColumn(name="LIST_ID", referencedColumnName="LIST_ID")}, 
 	inverseJoinColumns= { @JoinColumn(name="CAR_ID", referencedColumnName="ID", unique=true) } )
 	private List<Details> listOfCars;
 	
+
 	public ListDetails() {
 		super();
 	}
@@ -85,7 +86,11 @@ public class ListDetails {
 		this.listOfCars = listOfCars;
 	}
 	
-	
+	@Override
+	public String toString() {
+		return "ListDetails [id=" + id + ", listName=" + listName + ", owner=" + owner + ", listOfCars=" + listOfCars
+				+ "]";
+	}
 	
 	
 }
