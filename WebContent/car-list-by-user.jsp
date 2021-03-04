@@ -22,7 +22,6 @@
 </c:forEach>
 </c:forEach> 
 </table>
-<input type = "submit" value ="edit" name = "doThisToList">
 <input type = "submit" value ="delete" name = "doThisToList">
 <input type = "submit" value ="add" name = "doThisToList">
 </form>
