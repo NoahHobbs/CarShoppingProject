@@ -70,7 +70,7 @@ public class ListDetails {
 		return listName;
 	}
 	public void setListName(String listName) {
-		listName = listName;
+		this.listName = listName;
 	}
 	public Owner getOwner() {
 		return owner;
@@ -82,7 +82,7 @@ public class ListDetails {
 		return listOfCars;
 	}
 	public void setListOfCars(List<Details> listOfCars) {
-		listOfCars = listOfCars;
+		this.listOfCars = listOfCars;
 	}
 	
 	

@@ -11,7 +11,7 @@ import model.Details;
 
 
 public class DetailsHelper {
-	static EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("carsShoppingProject");
+	static EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("UserCarLists");
 	
 	public void insertCar(Details det) {
 		// This method inserts cars into my database
